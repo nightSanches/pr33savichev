@@ -77,7 +77,6 @@ namespace pr33savichev.Pages
             {
                 MainWindow.Instance.LoginUser = usersContext.Users.Where(x => x.Firstname == Firstname.Text && x.Lastname == Lastname.Text && x.Surname == Surname.Text).First();
                 MainWindow.Instance.LoginUser.Photo = File.ReadAllBytes(srcUserImage);
-                MainWindow.Instance.LoginUser.Online = DateTime.Now;
                 usersContext.SaveChanges();
             }
             else
