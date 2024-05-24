@@ -55,22 +55,22 @@ namespace pr33savichev.Pages
         {
             if (!CheckEmpty("^[А-ЯёЁ][а-яА-ЯёЁ]*$", Lastname.Text))
             {
-                MessageBox.Show("Укажите фамилию!");
+                MessageBox.Show("Укажите фамилию.");
                 return;
             }
             if (!CheckEmpty("^[А-ЯёЁ][а-яА-ЯёЁ]*$", Firstname.Text))
             {
-                MessageBox.Show("Укажите имя!");
+                MessageBox.Show("Укажите имя.");
                 return;
             }
             if (!CheckEmpty("^[А-ЯёЁ][а-яА-ЯёЁ]*$", Surname.Text))
             {
-                MessageBox.Show("Укажите отчество!");
+                MessageBox.Show("Укажите отчество.");
                 return;
             }
             if (String.IsNullOrEmpty(srcUserImage))
             {
-                MessageBox.Show("Выберите фотографию!");
+                MessageBox.Show("Выберите изображение.");
                 return;
             }
             if (usersContext.Users.Where(x => x.Firstname == Firstname.Text && x.Lastname == Lastname.Text && x.Surname == Surname.Text).Count() > 0)
@@ -81,7 +81,7 @@ namespace pr33savichev.Pages
             }
             else
             {
-                usersContext.Users.Add(new Users(Lastname.Text, Firstname.Text, Surname.Text, File.ReadAllBytes(srcUserImage), DateTime.Now));
+                usersContext.Users.Add(new Users(Lastname.Text, Firstname.Text, Surname.Text, File.ReadAllBytes(srcUserImage)));
                 usersContext.SaveChanges();
                 MainWindow.Instance.LoginUser = usersContext.Users.Where(x => x.Firstname == Firstname.Text && x.Lastname == Lastname.Text && x.Surname == Surname.Text).First();
             }

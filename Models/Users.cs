@@ -13,15 +13,13 @@ namespace pr33savichev.Models
         public string Firstname { get; set; }
         public string Surname { get; set; }
         public byte[] Photo { get; set; }
-        public DateTime Online { get; set; }
 
-        public Users(string Lastname, string Firstname, string Surname, byte[] Photo, DateTime Online)
+        public Users(string Lastname, string Firstname, string Surname, byte[] Photo)
         {
             this.Lastname = Lastname;
             this.Firstname = Firstname;
             this.Surname = Surname;
             this.Photo = Photo;
-            this.Online = Online;
         }
 
         public string ToFIO()

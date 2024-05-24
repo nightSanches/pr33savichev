@@ -8,6 +8,6 @@ namespace pr33savichev.Classes.Common
 {
     public class Config
     {
-        public static readonly string config = "Server=***;Trusted_Connection=False;Database=***;User=***;Pwd=***;";
+        public static readonly string config = "Server=student.permaviat.ru;Trusted_Connection=False;Database=***;User=***;Pwd=***;";
     }
 }

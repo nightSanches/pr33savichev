@@ -35,6 +35,7 @@ namespace pr33savichev.Pages.Items
             FIO.Content = user.ToFIO();
         }
 
-        private void SelectChat(object sender, MouseButtonEventArgs e) => main.SelectUser(user);
+        private void SelectChat(object sender, MouseButtonEventArgs e) => 
+            main.SelectUser(user);
     }
 }
